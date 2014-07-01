@@ -1,0 +1,115 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.action.extension" value=","/>
+    <constant name="struts.enable.SlashesInActionNames" value="true"/>
+    <package name="default" extends="struts-default" namespace="/">
+       
+    </package>
+    <package name="tracking" namespace="/" extends="json-default">
+       
+        <action name="inicioSesion" class="cl.movistar.tracking.action.InicioSesion" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>
+       
+        <action name="listaCanal" class="cl.movistar.tracking.action.canal.ListaCanal" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>
+        <action name="creaCanal" class="cl.movistar.tracking.action.canal.CreaCanal" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action> 
+        <action name="actualizaCanal" class="cl.movistar.tracking.action.canal.ActualizaCanal" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="eliminaCanal" class="cl.movistar.tracking.action.canal.EliminaCanal" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action> 
+        <action name="listaEventoSistema" class="cl.movistar.tracking.action.eventoSistema.ListaEventoSistema" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>
+        <action name="creaEventoSistema" class="cl.movistar.tracking.action.eventoSistema.CreaEventoSistema" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action> 
+        <action name="actualizaEventoSistema" class="cl.movistar.tracking.action.eventoSistema.ActualizaEventoSistema" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="eliminaEventoSistema" class="cl.movistar.tracking.action.eventoSistema.EliminaEventoSistema" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="listaAccionSistema" class="cl.movistar.tracking.action.accionSistema.ListaAccionSistema" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>
+        <action name="creaAccionSistema" class="cl.movistar.tracking.action.accionSistema.CreaAccionSistema" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action> 
+        <action name="actualizaAccionSistema" class="cl.movistar.tracking.action.accionSistema.ActualizaAccionSistema" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="eliminaAccionSistema" class="cl.movistar.tracking.action.accionSistema.EliminaAccionSistema" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="listaEventoNegocio" class="cl.movistar.tracking.action.eventoNegocio.ListaEventoNegocio" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>
+        <action name="creaEventoNegocio" class="cl.movistar.tracking.action.eventoNegocio.CreaEventoNegocio" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action> 
+        <action name="actualizaEventoNegocio" class="cl.movistar.tracking.action.eventoNegocio.ActualizaEventoNegocio" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="eliminaEventoNegocio" class="cl.movistar.tracking.action.eventoNegocio.EliminaEventoNegocio" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="listaAccionNegocio" class="cl.movistar.tracking.action.accionNegocio.ListaAccionNegocio" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>
+        <action name="creaAccionNegocio" class="cl.movistar.tracking.action.accionNegocio.CreaAccionNegocio" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action> 
+        <action name="actualizaAccionNegocio" class="cl.movistar.tracking.action.accionNegocio.ActualizaAccionNegocio" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="eliminaAccionNegocio" class="cl.movistar.tracking.action.accionNegocio.EliminaAccionNegocio" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="listaController" class="cl.movistar.tracking.action.controller.ListaController" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>
+        <action name="creaController" class="cl.movistar.tracking.action.controller.CreaController" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action> 
+        <action name="actualizaController" class="cl.movistar.tracking.action.controller.ActualizaController" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+        <action name="eliminaController" class="cl.movistar.tracking.action.controller.EliminaController" method="execute">
+            <result name="success" type="json"/>
+            <result name="error">login.jsp</result>
+        </action>  
+    </package>
+</struts>

@@ -1,0 +1,933 @@
+@charset "utf-8";
+/* CSS Document */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display: block;
+} 
+.body{
+    background: url(../img/fondo.png);
+    background-repeat: repeat-x;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.imagen_telefonica{
+    position: absolute;
+    left: 5px;
+    top: 0px;
+}
+.titulo_cabecera_DV {
+    font-family:Calibri, Verdana, Ariel, sans-serif;
+    font-size:28px;
+    color:#ffffff;
+    text-align: center;
+    position: relative;
+} 
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    .titulo_cabecera_DV {
+        font-family:Calibri, Verdana, Ariel, sans-serif;
+        font-size:28px;
+        color:#ffffff;
+        text-align: center;
+        position: relative;
+        top: -130px;
+    }
+}
+label{
+    font-family: Verdana, Arial, Geneva, sans-serif;
+    font-size:8pt;
+    font-weight:bold;
+    color: #043f5d; 
+}
+input text{
+    font-family:  Arial, Geneva, sans-serif;
+    font-size:8pt;
+    font-weight:bold;
+    color: #000000; 
+    opacity: 1 !important; 
+}
+select{
+    font-family:  Arial, Geneva, sans-serif;
+    font-size:8pt;
+    font-weight:bold;
+    color: #000000; 
+    opacity: 1 !important; 
+}
+.pantallaAutentificadora{
+    width: 400px;
+    height: 200px;
+    position: relative;
+/*    border-left: 1px solid red;
+    border-right:1px solid red;
+    border-top:1px solid red;
+    border-bottom:1px solid red;*/
+    margin: auto;
+    display: block;
+}
+.tituloPantallaInicio{
+    background: #7db223;
+    width: 100%;
+    height: 30px;
+}
+.tituloInicioSesion{
+    font-size: 15px;
+    line-height: 26px;
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    margin-left: 37%;
+}
+.contenidoPantallaIdentificacion{
+    width: 100%;
+    height: 85%;
+    position: relative;
+    /*    border-left: 1px solid green;
+        border-right:1px solid green;
+        border-top:1px solid green;
+        border-bottom:1px solid green;*/
+    background-color: #ffffff;
+    display: block;
+}
+.contenidoPantallaIdentificacion label{
+    margin-left: 20px;
+}
+.textoUsuario{
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.guionMedioRut{
+    position: relative;
+    left: -6px;
+}
+.digitoValidaRuttextoUsuario{
+    width: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.textoContrasena{
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.btnIngresarSesion{
+    width: 150px;
+    background: #0087A9;
+    border-width:2px;
+    color:#ffffff;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    border-left-color: #3FBBDD;
+    border-top-color: #3FBBDD;
+    border-right-color: #0C667F;
+    border-bottom-color: #0C667F;
+    position: absolute;
+    bottom: 17%;
+    right: 19%;
+    display: block;
+}
+.contenidoGeneralTRacking{
+    width: 800px;
+    height: 550px;
+    position: relative;
+    /*    border-left: 1px solid red;
+        border-right:1px solid red;
+        border-top:1px solid red;
+        border-bottom:1px solid red;*/
+    margin: auto;
+    display: none;
+}
+/*Inicio estilos menu izquierdo*/
+.contenidoMenuIzquierdo{
+    width: 250px;
+    height: 99.6%;
+    position: relative;
+    /*    border-left: 1px solid green;
+        border-right:1px solid green;
+        border-top:1px solid green;
+        border-bottom:1px solid green;*/
+    background-color: #ffffff;
+    display: block;
+}
+.contenidoMenuIzquierdo [name="seleccionDeEventoMenu"]:hover{
+    color: red;
+}
+.contenidoMenuIzquierdo [name="seleccionDeEventoMenu"]:focus{
+    color: red;
+}
+.contenidoMantenedorTracking{
+    width: 66%;
+    height: 99.6%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    /*    border-left: 1px solid brown;
+        border-right:1px solid brown;
+        border-top:1px solid brown;
+        border-bottom:1px solid brown;*/
+    display: block;
+}
+/*.contenidoMantenedorTracking [name="contenidosMantenedor"]{
+     width: 100%;
+    position: relative;
+    border: 1px solid red;
+    background: #ffffff;
+}*/
+.tituloMenuIzquierdoVerde{
+    background: #7db223;
+    width: 100%;
+    height: 30px;
+    margin: auto;
+}
+.tituloMenuIzquierdoVerde label{
+    font-size: 15px;
+    line-height: 26px;
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    margin-left: 5px;
+}
+.tituloMenuIzquierdoGris{
+    height: 20px;
+    border: 1px solid white;
+    background: #E9E9E9;
+}
+.tituloMenuIzquierdoGrisAncho{
+    height: 40px;
+    border: 1px solid white;
+    background: #E9E9E9;
+    position: relative;
+}
+.separacionTextoLargo1{
+    width: 100%;
+    height: 18px; 
+    /*    border: 1px solid brown;*/
+}
+.separacionTextoLargo2{
+    width: 100%;
+    height: 18px;
+    /*    border: 1px solid brown;*/
+}
+.tituloMenuIzquierdoGrisAncho label{
+    font-size: 12px;
+    line-height: 26px;
+    color: #777777;
+    font-weight: bold;
+    margin-left: 10px;
+    position: relative;
+    top: -5px;
+}
+.tituloMenuIzquierdoGris label{
+    font-size: 12px;
+    line-height: 26px;
+    color: #777777;
+    font-weight: bold;
+    margin-left: 10px;
+    position: relative;
+    top: -5px;
+}
+
+/*Fin estilos css menus izquierdo*/
+
+/*Inicio estilos contenido derecho*/
+/*inicio estilos evento negocio*/
+.inicioContenidoTracking{
+    display: block;
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+}
+.tituloInicioContenidoTracking{
+    width: 100%;
+    height: 25px;
+    background: #7DB223; 
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 26px;
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+}
+.contenidoEventoNegocio{
+    display: none;
+    width: 100%;
+    position: relative;
+    /*    border: 1px solid red;*/
+}
+.tituloEvento1{
+    width: 100%;
+    height: 25px;
+    background: #7DB223;
+    color: #ffffff;
+    position: relative;
+    display: none;
+}
+.tituloEvento2{
+    width: 100%;
+    height: 25px;
+    background: #7DB223;
+    color: #ffffff;
+    position: relative; 
+    display: none;
+}
+.tituloEvento3{
+    width: 100%;
+    height: 25px;
+    background: #7DB223;
+    color: #ffffff;
+    position: relative; 
+    display: none;
+}
+.tituloEvento1 label{
+    font-size: 15px;
+    line-height: 26px;
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    margin-left: 5px;
+}
+.tituloEvento2 label{
+    font-size: 15px;
+    line-height: 26px;
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    margin-left: 5px; 
+}
+.tituloEvento3 label{
+    font-size: 15px;
+    line-height: 26px;
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    margin-left: 5px; 
+}
+.seccionAgregarEventoNegocio{
+    width: 100%;
+    height: 200px;
+    background: #ffffff;
+    position: relative;
+    display: none;
+}
+.divisionSeccionCrearEventoIzquierdo{
+    width: 47%;
+    height: 99.6%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /*    border: 1px solid brown;*/
+}
+.labelCodigoEventoNegocio{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.labelDescripcionEventoNegocio{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.codigoCrearEventoNegocio{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.descripcionCrearEventoNegocio{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.divisionSeccionCrearEventoDerecho{
+    width: 52%;
+    height: 99.6%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    /*    border: 1px solid brown; */
+}
+.labelNombreCanal{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.nombreCrearCanal{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.labelNombreEventoNegocio{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.labelAccionNegocio{
+    position: absolute;
+    top: 38px;
+    left: 5px;
+}
+.nombreCrearEventoNegocio{
+    position: absolute;
+    top: 7px;
+    right: 3px;
+}
+.listaAccionesCrearEventoNegocio{
+    position: absolute;
+    top: 35px;
+    right: 3px;
+    width: 142px;
+}
+.btnAgregarAccionDeNegocio{
+    background: #9DCD0F;
+    width:130px;
+    height:23px;
+    border: 0px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color:#ffffff;
+    font-size: 13px;
+    margin-left: 100px; 
+    position: absolute;
+    top: 30%;
+    right: 54%;
+}
+.btnAgregarAccionDeNegocio:hover{
+    background: #BCDE4B;
+}
+.btnAgregarAccionDeNegocio:active{
+    background: #CEE976;
+}
+.ventanaAccionesNegocioSeleccionadas{
+    width: 70%;
+    height: 50%;
+    overflow: auto;
+    border: 1px solid #C1FF2F;
+    border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 2%;
+}
+.textosAcciones{
+    margin-left: 7%;
+}
+.imagenEliminarAccion{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    right: -5px;
+    bottom: -3px;   
+}
+.contenidoListaEventoNegocio{
+    width: 100%;
+    height: 522px;
+    background: #ffffff;
+    display: none;
+}
+.contenidoBuscarEvento{
+    width: 100%;
+    height: 25px;
+    /*    border: 1px solid red;*/
+    width: 100%;
+    position: relative;
+
+}
+.textoBuscarCodigoTabEvento{
+    width: 100px;
+    position: absolute;
+    right: 33%;
+    top: 3px;
+    margin: auto;
+}
+.btnBuscarCodEvento{
+    width: 100px;
+    background: #0087A9;
+    border-width:2px;
+    color:#ffffff;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    border-left-color: #3FBBDD;
+    border-top-color: #3FBBDD;
+    border-right-color: #0C667F;
+    border-bottom-color: #0C667F;
+    position: absolute;
+    top: 2px;
+    right: 13%;
+}
+.contenedorTablaEvento{
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    width: 99.8%;
+    height: 480px;
+    /*    border: 1px solid blue;*/
+    overflow: auto;
+}
+.tablaEvento{
+    position: relative;
+    top: 10px;
+    margin: auto;
+    border: 1px solid #BCDAFF;
+}
+.tdTablaEvento1{
+    width: 150px;
+    border: 1px solid #ffffff;
+    background: #F2F5FF;
+    font-family: Arial, Verdana, Geneva, sans-serif;	
+    font-size:10pt;
+    font-weight:bold;
+    color: #000000; 
+    text-align: center;
+}
+.tdTablaEvento2{
+    width: 330px;
+    border: 1px solid #ffffff;
+    background: #F2F5FF;
+    background: #F2F5FF;
+    font-family: Arial, Verdana, Geneva, sans-serif;	
+    font-size:10pt;
+    font-weight:bold;
+    color: #000000; 
+    text-align: center;
+}
+.contenidoEventoSistema{
+    display: none;
+    width: 100%;
+    background:  white;
+    /*    border: 1px solid red;*/
+}
+.seccionAgregarEventoSistema{
+    width: 100%;
+    height: 260px;
+    background: #ffffff;
+    position: relative;
+    display: none;
+}
+.divisionSeccionCrearEventoSisIzquierdo{
+    width: 47%;
+    height: 99.6%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /*    border: 1px solid brown;*/
+}
+.labelCodigoControlEventos{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.labelDescripcionControlEventos{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.descripcionCrearControlEventos{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.codigoCrearEventoSistema{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.descripcionCrearEventoSistema{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.xsdCrearEventoSistema{
+    position: absolute;
+    right: 3px;
+    top: 62px;    
+}
+.nombreCrearEventoSistema{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.canalCrearEventoSistema{
+    position: absolute;
+    right: 3px;
+    top: 35px; 
+}
+.listaAccionesCrearEventoSistema{
+    position: absolute;
+    right: 3px;
+    /*top: 63px;*/ 
+    top: 38px; 
+    width: 142px;
+}
+.listaCanalCrearEventoSistema{
+    position: absolute;
+    right: 3px;
+    top: 35px; 
+    width: 142px;
+}
+
+.btnAgregarAccionDeSistema{
+    background: #9DCD0F;
+    width:130px;
+    height:23px;
+    border: 0px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    color:#ffffff;
+    font-size: 13px;
+    margin-left: 100px; 
+    position: absolute;
+    top: 35%;
+    right: 54%;
+}
+.btnAgregarAccionDeSistema:hover{
+    background: #BCDE4B;
+}
+.btnAgregarAccionDeSistema:active{
+    background: #CEE976;
+}
+.ventanaAccionesSistemasSeleccionadas{
+    width: 70%;
+    height: 50%;
+    overflow: auto;
+    border: 1px solid #C1FF2F;
+    border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 2%;
+}
+.labelCodigoEventoSistema{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.labelDescripcionEventoSistema{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.labelXSDEventoSistema{
+    position: absolute;
+    top: 66px;
+    left: 10px;
+}
+.divisionSeccionCrearEventoSisDerecho{
+    width: 52%;
+    height: 99.6%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    /*    border: 1px solid brown; */
+}
+.labelNombreEventoSistema{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.labelCanalEventoSistema{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.labelAccionNegosioEventoSistema{
+    position: absolute;
+    /*top: 66px;*/
+    top: 38px;
+    left: 5px;
+}
+.contenidoListaEventoSistema{
+    width: 100%;
+    height: 522px;
+    background: #ffffff;
+    display: block;
+}
+.contenidoBuscarEventoSistema{
+    width: 100%;
+    height: 25px;
+    /*    border: 1px solid red;*/
+    width: 100%;
+    position: relative;
+
+}
+.contenidoCanal{
+    display: none;
+    width: 100%;
+    position: relative;
+    /*    border: 1px solid red;*/
+    background: #ffffff;
+}
+.seccionAgregarCanal{
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    position: relative;
+    display: block;
+}
+.seccionActualizaCanal{
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    position: relative;
+    display: block;
+}
+.labelCodigoCanal{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.codigoCrearCanal{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.labelDescripcionCanal{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.descripcionCrearCanal{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.seccionListarCanal {
+    width: 100%;
+    height: 522px;
+    background: #ffffff;
+    display: none;
+}
+.contenidoAccionNegocio{
+    display: none;
+    width: 100%;
+    position: relative;
+    /*    border: 1px solid red;*/
+    background: #ffffff;
+}
+.seccionAgregarAccionNegocio{
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    position: relative;
+    display: none;
+}
+.seccionActualizaAccionNegocio{
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    position: relative;
+    display: none;
+}
+.labelCodigoAccionNegocio{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.codigoCrearAccionNegocio{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.labelDescripcionAccionNegocio{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.descripcionCrearAccionNegocio{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.labelNombreAccionNegocio{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.nombreCrearAccionNegocio{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.labelTipoAccionNegocio{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.tipoCrearAccionNegocio{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.contenidoListaAccionNegocio{
+    width: 100%;
+    height: 522px;
+    background: #ffffff;
+    display: block;
+}
+.contenidoAccionSistema{
+    display: none;
+    width: 100%;
+    position: relative;
+    /*    border: 1px solid red;*/
+    background: #ffffff;
+}
+.seccionAgregarAccionSistema{
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    position: relative;
+    display: block;
+}
+.seccionActualizarAccionSistema{
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    position: relative;
+    display: block;
+}
+.labelCodigoAccionSistema{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.labelDescripcionAccionSistema{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.codigoCrearAccionSistema{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.descripcionCrearAccionSistema{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.labelDataAccionSistema{
+    position: absolute;
+    top: 66px;
+    left: 10px;
+}
+.dataCrearAccionSistema{
+    position: absolute;
+    right: 3px;
+    top: 62px;    
+}
+.labelNombreAccionSistema{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.nombreCrearAccionSistema{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.labelTipoAccionSistema{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.tipoCrearAccionSistema{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.contenidoListaAccionSistema{
+    width: 100%;
+    height: 522px;
+    background: #ffffff;
+    display: none;
+}
+.contenidoControlEventos{
+    display: none;
+    width: 100%;
+    position: relative;
+    /*    border: 1px solid red;*/
+    background: #ffffff;
+}
+.seccionAgregarControlEventos{
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    position: relative;
+    display: block;
+}
+.codigoCrearControlEventos{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.labelControlEventosSistema{
+    position: absolute;
+    top: 66px;
+    left: 10px;
+}
+.eventoSistemaControlEventos{
+    position: absolute;
+    right: 3px;
+    top: 62px;
+}
+.divisionSeccionCrearControlEventos{
+    width: 52%;
+    height: 99.6%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    /*    border: 1px solid brown; */
+}
+.labelNombreControlEventos{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.nombreCrearControlEventos{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+.labelEventoNegocioControlEventos{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+}
+.eventoNegocioControlEventos{
+    position: absolute;
+    right: 3px;
+    top: 35px;
+}
+.labelCanalControlEventos{
+    position: absolute;
+    left: 10px;
+    top: 63px;
+}
+.canalControlEventos{
+    position: absolute;
+    right: 3px;
+    top: 63px;
+}
+.contenidoListaControlEventos{
+    width: 100%;
+    height: 522px;
+    background: #ffffff;
+    display: none;
+    overflow: auto;
+}
+.contenidoTriggerEventoNegocio{
+    display: none; 
+    width: 100%;
+    position: relative;
+    /*    border: 1px solid red;*/
+    background: #ffffff;
+}
+.btnIngresarEvento{
+    width: 150px;
+    background: #0087A9;
+    border-width:2px;
+    color:#ffffff;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    border-left-color: #3FBBDD;
+    border-top-color: #3FBBDD;
+    border-right-color: #0C667F;
+    border-bottom-color: #0C667F;
+    position: absolute;
+    bottom: 40%;
+    right: 13%;
+    display: none;
+}
+
+/*Fin estilos evento negocio*/
+
+
+
+
+/*Fin estilos contedino derecho*/
