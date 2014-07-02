@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DB2Dialect</property>
+    <property name="hibernate.connection.driver_class">com.ibm.db2.jcc.DB2Driver</property>
+    <property name="hibernate.connection.url">jdbc:db2://10.186.31.13:56000/TRACKING</property>
+    <property name="hibernate.connection.username">USERTRCK</property>
+    <property name="hibernate.connection.password">track2014</property>
+    
+<!--     <property name="hibernate.dialect">org.hibernate.dialect.DB2Dialect</property> 
+     <property name="current_session_context_class">thread</property> 
+     <property name="hibernate.bytecode.use_reflection_optimizer">false</property> 
+     <property name="hibernate.connection.datasource">java:comp/env/jndi/tracking</property> -->
+    
+    <mapping resource="cl/movistar/tracking/hibernate/EventosTracking.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/EventoSistema.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/AccionSistema.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/Usuarios.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/Canal.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/EventoNegocio.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/Estado.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/CambioUmbral.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/VentaBolsa.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/AccionNegocio.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/MovimientosTracking.hbm.xml"/>
+    <mapping resource="cl/movistar/tracking/hibernate/BitacoraRecurrencia.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
