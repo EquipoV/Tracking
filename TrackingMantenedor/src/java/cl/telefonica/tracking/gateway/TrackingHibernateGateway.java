@@ -57,7 +57,7 @@ public class TrackingHibernateGateway {
 
             session = TrackingHibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
-            Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.Canal");
+            Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.Canal ORDER BY id");
             canales = query.list();
         } catch (Exception e) {
         } finally {
@@ -72,7 +72,7 @@ public class TrackingHibernateGateway {
         try {
         session = TrackingHibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.EventoSistema");
+        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.EventoSistema ORDER BY id");
         eventos = query.list();
        } catch (Exception e) {
        } finally {
@@ -87,7 +87,7 @@ public class TrackingHibernateGateway {
         try{
         session = TrackingHibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.AccionSistema");
+        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.AccionSistema ORDER BY id");
         acciones = query.list();
        } catch (Exception e) {
         } finally {
@@ -101,7 +101,7 @@ public class TrackingHibernateGateway {
         try{
         session = TrackingHibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.EventoNegocio");
+        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.EventoNegocio ORDER BY id");
         eventos = query.list();
         } catch (Exception e) {
         } finally {
@@ -116,7 +116,7 @@ public class TrackingHibernateGateway {
         try{
         session = TrackingHibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.AccionNegocio");
+        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.AccionNegocio ORDER BY id");
         accion = query.list();
         } catch (Exception e) {
         } finally {
@@ -130,7 +130,7 @@ public class TrackingHibernateGateway {
        try{
         session = TrackingHibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.EventosTracking");
+        Query query = session.createQuery("FROM cl.telefonica.tracking.hibernate.dto.EventosTracking ORDER BY id");
         eventos = query.list();
         } catch (Exception e) {
         } finally {

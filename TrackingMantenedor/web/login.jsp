@@ -13,7 +13,7 @@
         <script type="text/javascript" src="js/jquery-ui.js"></script>        
         <script type="text/javascript" src="js/accounting.min.js"></script>
         <script type="text/javascript" src="js/handlebars-1.0.rc.1.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/style_css_Tracking.css"/>
+        <link rel="stylesheet"  type="text/css" href="css/style_css_Tracking.css"/>
         <link rel="stylesheet" type="text/css" href="css/cssJQueryUI_-v1.10.css"/>
         <script type="text/javascript">
             $.ajaxSetup({cache: false});
@@ -26,13 +26,13 @@
                 viewManager.eventosClickFunctions();
             });
         </script>
-        <script type="text/javascript" src="js/variablesGlobal.js"></script>
-        <script type="text/javascript" src="js/tracking_Jquery_Function.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="js/variablesGlobal.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="js/tracking_Jquery_Function.js"></script>
     </head>
     <!--        <body class="body" oncontextmenu="return false">-->
     <body class="body"> 
         <img src="img/logo_unifica.jpg" class="imagen_telefonica"/>
-        <div style="text-align: right; color: white; font-size: 12px;">v. (2706.1)</div>
+        <div style="text-align: right; color: white; font-size: 12px;">v. (0207.1)</div>
         <div class="titulo_cabecera_DV">
             Tracking
         </div>
