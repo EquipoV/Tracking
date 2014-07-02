@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.tracking.movistar.cl" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.tracking.movistar.cl" xmlns:intf="http://services.tracking.movistar.cl" xmlns:tns1="http://dto.tracking.movistar.cl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.tracking.movistar.cl" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://dto.tracking.movistar.cl"/>
+   <element name="trackingAltaBajaBolsa">
+    <complexType>
+     <sequence>
+      <element name="altaBajaBolsaRequest" type="tns1:AltaBajaBolsaRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingAltaBajaBolsaResponse">
+    <complexType>
+     <sequence>
+      <element name="trackingAltaBajaBolsaReturn" type="tns1:TrackingResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://dto.tracking.movistar.cl" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="Bolsa">
+    <sequence>
+     <element name="codigo" type="xsd:string"/>
+     <element name="descripcion" nillable="true" type="xsd:string"/>
+     <element name="idRed" type="xsd:string"/>
+     <element name="nombre" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="AltaBajaBolsaRequest">
+    <sequence>
+     <element name="bolsa" nillable="true" type="tns1:Bolsa"/>
+     <element name="codigoVendedor" nillable="true" type="xsd:int"/>
+	 <element name="usuario" nillable="true" type="xsd:string"/>
+	 <element name="agencia" nillable="true" type="xsd:string"/>
+	 <element name="canal" nillable="true" type="xsd:string"/>
+	 <element name="subCanal" nillable="true" type="xsd:string"/>
+     <element name="ciclo" type="xsd:int"/>
+     <element name="numeroAbonado" type="xsd:int"/>
+     <element name="numeroCelular" type="xsd:int"/>
+     <element name="codigoEventoSistema" nillable="true" type="xsd:int"/>
+	</sequence>
+   </complexType>
+   <complexType name="Respuesta">
+    <sequence>
+     <element name="estado" nillable="true" type="xsd:string"/>
+     <element name="idSolicitud" type="xsd:int"/>
+     <element name="mensaje" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RespuestaServicio">
+    <sequence>
+     <element name="codigoError" type="xsd:int"/>
+     <element name="descripcionError" nillable="true" type="xsd:string"/>
+     <element name="mensajeError" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TrackingResponse">
+    <sequence>
+     <element name="respuesta" nillable="true" type="tns1:Respuesta"/>
+     <element name="respuestaServicio" nillable="true" type="tns1:RespuestaServicio"/>
+    </sequence>
+   </complexType>
+  
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="trackingAltaBajaBolsaResponse">
+
+      <wsdl:part element="impl:trackingAltaBajaBolsaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingAltaBajaBolsaRequest">
+
+      <wsdl:part element="impl:trackingAltaBajaBolsa" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="TrackingAltaBaja">
+
+      <wsdl:operation name="trackingAltaBajaBolsa">
+
+         <wsdl:input message="impl:trackingAltaBajaBolsaRequest" name="trackingAltaBajaBolsaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:trackingAltaBajaBolsaResponse" name="trackingAltaBajaBolsaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TrackingAltaBajaSoapBinding" type="impl:TrackingAltaBaja">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="trackingAltaBajaBolsa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="trackingAltaBajaBolsaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="trackingAltaBajaBolsaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TrackingAltaBajaService">
+
+      <wsdl:port binding="impl:TrackingAltaBajaSoapBinding" name="TrackingAltaBaja">
+
+         <wsdlsoap:address location="http://localhost:8080/TrackingServicesAltaBaja/services/TrackingAltaBaja"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

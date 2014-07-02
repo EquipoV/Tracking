@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.tracking.movistar.cl" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.tracking.movistar.cl" xmlns:intf="http://services.tracking.movistar.cl" xmlns:tns1="http://dto.tracking.movistar.cl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.tracking.movistar.cl" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://dto.tracking.movistar.cl"/>
+   <element name="trackingAltaBolsa">
+    <complexType>
+     <sequence>
+      <element name="altaBolsaRequest" type="tns1:AltaBolsaRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingAltaBolsaResponse">
+    <complexType>
+     <sequence>
+      <element name="trackingAltaBolsaReturn" type="tns1:TrackingResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingBajaBolsa">
+    <complexType>
+     <sequence>
+      <element name="bajaBolsaRequest" type="tns1:BajaBolsaRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingBajaBolsaResponse">
+    <complexType>
+     <sequence>
+      <element name="trackingBajaBolsaReturn" type="tns1:TrackingResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingCambioEstado">
+    <complexType>
+     <sequence>
+      <element name="cambioEstadoRequest" type="tns1:CambioEstadoRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingCambioEstadoResponse">
+    <complexType>
+     <sequence>
+      <element name="trackingCambioEstadoReturn" type="tns1:TrackingResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingCambioUmbral">
+    <complexType>
+     <sequence>
+      <element name="cambioUmbralRequest" type="tns1:CambioUmbralRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingCambioUmbralResponse">
+    <complexType>
+     <sequence>
+      <element name="trackingCambioUmbralReturn" type="tns1:TrackingResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingRegistroVenta">
+    <complexType>
+     <sequence>
+      <element name="registroVentaRequest" type="tns1:RegistroVentaRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingRegistroVentaResponse">
+    <complexType>
+     <sequence>
+      <element name="trackingRegistroVentaReturn" type="tns1:TrackingResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingBitacoraRecurrencia">
+    <complexType>
+     <sequence>
+      <element name="bitacoraRecurrenciaRequest" type="tns1:BitacoraRecurrenciaRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="trackingBitacoraRecurrenciaResponse">
+    <complexType>
+     <sequence>
+      <element name="trackingBitacoraRecurrenciaReturn" type="tns1:TrackingResponse"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://dto.tracking.movistar.cl" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="Bolsa">
+    <sequence>
+     <element name="codigo" type="xsd:string"/>
+     <element name="descripcion" nillable="true" type="xsd:string"/>
+     <element name="idRed" type="xsd:string"/>
+     <element name="nombre" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="AltaBolsaRequest">
+    <sequence>
+     <element name="bolsa" nillable="true" type="tns1:Bolsa"/>
+     <element name="usuario" nillable="true" type="xsd:string"/>
+	 <element name="canal" nillable="true" type="xsd:string"/>
+     <element name="ciclo" type="xsd:int"/>
+     <element name="numeroAbonado" type="xsd:int"/>
+     <element name="numeroCelular" type="xsd:int"/>
+     <element name="codigoEventoSistema" nillable="true" type="xsd:int"/>
+	</sequence>
+   </complexType>
+   <complexType name="Respuesta">
+    <sequence>
+     <element name="estado" nillable="true" type="xsd:string"/>
+     <element name="idSolicitud" type="xsd:int"/>
+     <element name="mensaje" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RespuestaServicio">
+    <sequence>
+     <element name="codigoError" type="xsd:int"/>
+     <element name="descripcionError" nillable="true" type="xsd:string"/>
+     <element name="mensajeError" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TrackingResponse">
+    <sequence>
+     <element name="respuesta" nillable="true" type="tns1:Respuesta"/>
+     <element name="respuestaServicio" nillable="true" type="tns1:RespuestaServicio"/>
+    </sequence>
+   </complexType>
+   <complexType name="BajaBolsaRequest">
+    <sequence>
+     <element name="bolsa" nillable="true" type="tns1:Bolsa"/>
+     <element name="canal" nillable="true" type="xsd:string"/>
+	 <element name="usuario" nillable="true" type="xsd:string"/>
+     <element name="numeroAbonado" type="xsd:int"/>
+     <element name="numeroCelular" type="xsd:int"/>
+	 <element name="codigoEventoSistema" nillable="true" type="xsd:int"/>
+	</sequence>
+   </complexType>
+   <complexType name="CambioEstadoRequest">
+    <sequence>
+     <element name="canal" nillable="true" type="xsd:string"/>
+     <element name="estado" nillable="true" type="xsd:string"/>
+     <element name="idSolicitud" type="xsd:int"/>
+	 <element name="codigoEventoSistema" nillable="true" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="CambioUmbralRequest">
+    <sequence>
+     <element name="canal" nillable="true" type="xsd:string"/>
+     <element name="cantidadFinal" type="xsd:int"/>
+     <element name="cantidadInicial" type="xsd:int"/>
+     <element name="codigo" type="xsd:string"/>
+     <element name="descripcion" nillable="true" type="xsd:string"/>
+     <element name="fechaModificacion" nillable="true" type="xsd:dateTime"/>
+     <element name="nombre" nillable="true" type="xsd:string"/>
+     <element name="tipoProducto" nillable="true" type="xsd:string"/>
+	 <element name="codigoEventoSistema" nillable="true" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="RegistroVentaRequest">
+    <sequence>
+	 <element name="usuario" nillable="true" type="xsd:string"/>
+     <element name="canal" nillable="true" type="xsd:string"/>
+     <element name="idRed" nillable="true" type="xsd:string"/>
+     <element name="numeroAbonadoBeneficiario" type="xsd:int"/>
+	 <element name="numeroAbonadoComprador" type="xsd:int"/>
+     <element name="numeroCliente" type="xsd:int"/>
+	 <element name="fechaActivacion" nillable="true" type="xsd:dateTime"/>
+	 <element name="cantidad" type="xsd:int"/>
+	 <element name="precioBolsa" type="xsd:int"/>
+	 <element name="codigoEventoSistema" nillable="true" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="BitacoraRecurrenciaRequest">
+    <sequence>
+     <element name="canal" nillable="true" type="xsd:string"/>
+     <element name="idRed" nillable="true" type="xsd:string"/>
+     <element name="numeroAbonado" type="xsd:int"/>
+	 <element name="codigoEventoSistema" nillable="true" type="xsd:int"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="trackingBitacoraRecurrenciaResponse">
+
+      <wsdl:part element="impl:trackingBitacoraRecurrenciaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingCambioUmbralResponse">
+
+      <wsdl:part element="impl:trackingCambioUmbralResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingCambioEstadoResponse">
+
+      <wsdl:part element="impl:trackingCambioEstadoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingBajaBolsaResponse">
+
+      <wsdl:part element="impl:trackingBajaBolsaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingRegistroVentaRequest">
+
+      <wsdl:part element="impl:trackingRegistroVenta" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingCambioUmbralRequest">
+
+      <wsdl:part element="impl:trackingCambioUmbral" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingCambioEstadoRequest">
+
+      <wsdl:part element="impl:trackingCambioEstado" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingAltaBolsaResponse">
+
+      <wsdl:part element="impl:trackingAltaBolsaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingAltaBolsaRequest">
+
+      <wsdl:part element="impl:trackingAltaBolsa" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingBitacoraRecurrenciaRequest">
+
+      <wsdl:part element="impl:trackingBitacoraRecurrencia" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingBajaBolsaRequest">
+
+      <wsdl:part element="impl:trackingBajaBolsa" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="trackingRegistroVentaResponse">
+
+      <wsdl:part element="impl:trackingRegistroVentaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="TrackingImpl">
+
+      <wsdl:operation name="trackingAltaBolsa">
+
+         <wsdl:input message="impl:trackingAltaBolsaRequest" name="trackingAltaBolsaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:trackingAltaBolsaResponse" name="trackingAltaBolsaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingBajaBolsa">
+
+         <wsdl:input message="impl:trackingBajaBolsaRequest" name="trackingBajaBolsaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:trackingBajaBolsaResponse" name="trackingBajaBolsaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingCambioEstado">
+
+         <wsdl:input message="impl:trackingCambioEstadoRequest" name="trackingCambioEstadoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:trackingCambioEstadoResponse" name="trackingCambioEstadoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingCambioUmbral">
+
+         <wsdl:input message="impl:trackingCambioUmbralRequest" name="trackingCambioUmbralRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:trackingCambioUmbralResponse" name="trackingCambioUmbralResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingRegistroVenta">
+
+         <wsdl:input message="impl:trackingRegistroVentaRequest" name="trackingRegistroVentaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:trackingRegistroVentaResponse" name="trackingRegistroVentaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingBitacoraRecurrencia">
+
+         <wsdl:input message="impl:trackingBitacoraRecurrenciaRequest" name="trackingBitacoraRecurrenciaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:trackingBitacoraRecurrenciaResponse" name="trackingBitacoraRecurrenciaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TrackingImplSoapBinding" type="impl:TrackingImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="trackingAltaBolsa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="trackingAltaBolsaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="trackingAltaBolsaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingBajaBolsa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="trackingBajaBolsaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="trackingBajaBolsaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingCambioEstado">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="trackingCambioEstadoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="trackingCambioEstadoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingCambioUmbral">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="trackingCambioUmbralRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="trackingCambioUmbralResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingRegistroVenta">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="trackingRegistroVentaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="trackingRegistroVentaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="trackingBitacoraRecurrencia">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="trackingBitacoraRecurrenciaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="trackingBitacoraRecurrenciaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TrackingImplService">
+
+      <wsdl:port binding="impl:TrackingImplSoapBinding" name="TrackingImpl">
+
+         <wsdlsoap:address location="http://localhost:8080/Tracking/services/TrackingImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

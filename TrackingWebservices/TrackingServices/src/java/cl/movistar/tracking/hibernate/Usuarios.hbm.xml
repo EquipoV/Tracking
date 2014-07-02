@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-06-2014 06:08:02 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="cl.movistar.tracking.hibernate.Usuarios" table="USUARIOS" schema="USERTRCK">
+        <id name="codigo" type="int">
+            <column name="CODIGO" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="100" not-null="true" />
+        </property>
+        <property name="rut" type="string">
+            <column name="RUT" length="100" not-null="true" />
+        </property>
+        <property name="contrasena" type="string">
+            <column name="CONTRASENA" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

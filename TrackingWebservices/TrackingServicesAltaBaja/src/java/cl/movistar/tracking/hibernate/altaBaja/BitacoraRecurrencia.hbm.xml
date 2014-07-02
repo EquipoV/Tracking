@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-06-2014 06:05:00 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="cl.movistar.tracking.hibernate.altaBaja.BitacoraRecurrencia" table="BITACORA_RECURRENCIA" schema="USERTRCK">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaInicio" type="date">
+            <column name="FECHA_INICIO" length="10" not-null="true" />
+        </property>
+        <property name="fechaFin" type="date">
+            <column name="FECHA_FIN" length="10" />
+        </property>
+        <property name="idTracking" type="int">
+            <column name="ID_TRACKING" not-null="true" />
+        </property>
+        <property name="idBolsa" type="string">
+            <column name="ID_BOLSA" length="100" not-null="true" />
+        </property>
+        <property name="nombreBolsa" type="string">
+            <column name="NOMBRE_BOLSA" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-schema="USERTRCK"/>
+  <table-filter match-name="EVENTO_NEGOCIO"/>
+  <table-filter match-name="ESTADO"/>
+  <table-filter match-name="ACCION_SISTEMA"/>
+  <table-filter match-name="CAMBIO_UMBRAL"/>
+  <table-filter match-name="MOVIMIENTOS_TRACKING2"/>
+  <table-filter match-name="CANAL"/>
+  <table-filter match-name="MOVIMIENTOS_TRACKING"/>
+  <table-filter match-name="VENTA_BOLSA"/>
+  <table-filter match-name="VENTA_BOLSA2"/>
+  <table-filter match-name="USUARIOS"/>
+  <table-filter match-name="EVENTOS_TRACKING"/>
+  <table-filter match-name="BITACORA_RECURRENCIA"/>
+  <table-filter match-name="ACCION_NEGOCIO"/>
+  <table-filter match-name="EVENTO_SISTEMA"/>
+</hibernate-reverse-engineering>
